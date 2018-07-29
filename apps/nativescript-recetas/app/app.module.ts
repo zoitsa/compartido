@@ -1,5 +1,6 @@
 // angular
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NativeScriptHttpModule } from 'nativescript-angular/http';
 
 // app
 import { CoreModule } from './core/core.module';
@@ -7,8 +8,13 @@ import { SharedModule } from './features/shared/shared.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [CoreModule, SharedModule],
+  imports: [
+    CoreModule, 
+    SharedModule,
+    NativeScriptHttpModule,
+  ],
   declarations: [AppComponent],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

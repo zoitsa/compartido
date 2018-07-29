@@ -11,6 +11,18 @@ import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { NxModule } from '@nrwl/nx';
 import { TranslateService } from '@ngx-translate/core';
 import { throwIfAlreadyLoaded } from '@compartido/utils';
+import { reducers, metaReducers } from '@compartido/reducers';
+import { RecipesEffects } from '@compartido/effects/recipes.effects';
+import { ApiService } from './services/api.service';
+import {
+  CMSActions,
+  CMSActionsSubject,
+} from './services/dispatcher.service';
+
+// ngrx
+import { StoreModule, ActionsSubject } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 
 // app
 import { environment } from './environments/environment';
@@ -31,7 +43,17 @@ export const BASE_PROVIDERS: any[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, NxModule.forRoot()]
+  imports: [
+    CommonModule, NxModule.forRoot(),
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([RecipesEffects]),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+  ],
+  providers: [
+    ApiService,
+    { provide: ActionsSubject, useClass: CMSActionsSubject },
+    CMSActions,
+  ]
 })
 export class CoreModule {
   // configuredProviders: *required to configure WindowService and others per platform
