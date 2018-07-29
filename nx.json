@@ -7,5 +7,21 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "libs": {
+      "tags": []
+    },
+    "xplat": {
+      "tags": []
+    },
+    "web-recetas": {
+      "tags": []
+    },
+    "web-recetas-e2e": {
+      "tags": []
+    },
+    "nativescript-recetas": {
+      "tags": []
+    }
+  }
 }

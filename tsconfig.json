@@ -16,6 +16,21 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@compartido/*": [
+        "libs/*"
+      ],
+      "@compartido/nativescript": [
+        "xplat/nativescript/index.ts"
+      ],
+      "@compartido/nativescript/*": [
+        "xplat/nativescript/*"
+      ],
+      "@compartido/web": [
+        "xplat/web/index.ts"
+      ],
+      "@compartido/web/*": [
+        "xplat/web/*"
+      ]
     }
   },
   "exclude": [
