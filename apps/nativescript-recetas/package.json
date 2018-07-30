@@ -3,10 +3,7 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "version": "0.0.0",
   "nativescript": {
-    "id": "org.nativescript.recetas",
-    "tns-ios": {
-      "version": "3.4.1"
-    }
+    "id": "org.nativescript.recetas"
   },
   "scripts": {
     "reset": "npx rimraf -- hooks node_modules platforms && npm run css.clean && npm run js.clean",
@@ -37,13 +34,13 @@
     "@angular/platform-browser": "file:../../node_modules/@angular/platform-browser",
     "@angular/platform-browser-dynamic": "file:../../node_modules/@angular/platform-browser-dynamic",
     "@angular/router": "file:../../node_modules/@angular/router",
-    "@compartido/nativescript": "file:../../xplat/nativescript",
-    "@compartido/scss": "file:../../libs/scss",
+    "@ngx-translate/core": "file:../../node_modules/@ngx-translate/core",
+    "@nrwl/nx": "file:../../node_modules/@nrwl/nx",
     "@ngrx/effects": "file:../../node_modules/@ngrx/effects",
     "@ngrx/router-store": "file:../../node_modules/@ngrx/router-store",
     "@ngrx/store": "file:../../node_modules/@ngrx/store",
-    "@ngx-translate/core": "file:../../node_modules/@ngx-translate/core",
-    "@nrwl/nx": "file:../../node_modules/@nrwl/nx",
+    "@compartido/nativescript": "file:../../xplat/nativescript",
+    "@compartido/scss": "file:../../libs/scss",
     "nativescript-angular": "file:../../node_modules/nativescript-angular",
     "nativescript-ngx-fonticon": "file:../../node_modules/nativescript-ngx-fonticon",
     "nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",

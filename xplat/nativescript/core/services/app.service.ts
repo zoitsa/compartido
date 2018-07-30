@@ -140,7 +140,7 @@ const getOrientation = function() {
       return DeviceOrientation.landscape;
     } else if (
       deviceOrientation === UIDeviceOrientation.Portrait ||
-      deviceOrientation == UIDeviceOrientation.PortraitUpsideDown
+      deviceOrientation === UIDeviceOrientation.PortraitUpsideDown
     ) {
       return DeviceOrientation.portrait;
     } else {

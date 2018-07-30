@@ -28,7 +28,8 @@
     "start.web.recetas": "ng serve web-recetas",
     "start.nativescript.recetas.ios": "cd apps/nativescript-recetas && tns run ios --emulator --bundle --env.aot",
     "start.nativescript.recetas.android": "cd apps/nativescript-recetas && tns run android --emulator --bundle --env.aot",
-    "clean.nativescript.recetas": "cd apps/nativescript-recetas && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json"
+    "clean.nativescript.recetas": "cd apps/nativescript-recetas && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json",
+    "start.web.test": "ng serve web-test"
   },
   "private": true,
   "dependencies": {
