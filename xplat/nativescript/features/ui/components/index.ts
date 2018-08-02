@@ -1,3 +1,6 @@
-import { HeaderComponent } from './header/header.component';
+export * from './search/search.component';
 
-export const UI_COMPONENTS = [HeaderComponent];
+import { HeaderComponent } from '@compartido/nativescript/features/ui/components/header/header.component';
+import { SearchComponent } from './search/search.component';
+
+export const UI_COMPONENTS = [HeaderComponent,SearchComponent];

@@ -1,3 +1,3 @@
-export * from './angular';
-export * from './objects';
-export * from './platform';
+export * from '@compartido/utils/angular';
+export * from '@compartido/utils/objects';
+export * from '@compartido/utils/platform';

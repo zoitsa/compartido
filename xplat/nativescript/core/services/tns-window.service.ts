@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
 // nativescript
-import * as dialogs from 'tns-core-modules/ui/dialogs';
-import { device, isIOS } from 'tns-core-modules/platform';
-import * as timer from 'tns-core-modules/timer';
+import * as dialogs from 'tns-core-modules/ui/dialogs/dialogs';
+import { device, isIOS } from 'tns-core-modules/platform/platform';
+import * as timer from 'tns-core-modules/timer/timer';
 
 // app
 import { isString } from '@compartido/utils';

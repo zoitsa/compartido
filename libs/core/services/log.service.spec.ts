@@ -1,7 +1,7 @@
 // angular
 import { TestBed, inject } from '@angular/core/testing';
 // app
-import { LogService } from './log.service';
+import { LogService } from '@compartido/core/services/log.service';
 
 const reset = () => {
   for (const key in LogService.DEBUG) {

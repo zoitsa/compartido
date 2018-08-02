@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { BaseComponent } from '@compartido/core';
+// import { SearchBaseComponent } from '@compartido/features';
+
 
 @Component({
   selector: 'compartido-home',

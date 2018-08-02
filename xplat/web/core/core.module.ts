@@ -1,6 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';   // Added
 
 // libs
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -33,6 +34,7 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     CoreModule.forRoot([
       {
         provide: PlatformLanguageToken,

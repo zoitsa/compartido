@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UIModule } from '@compartido/web'
 
 // libs
 import { environment } from '@compartido/core';
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
         CoreModule,
         SharedModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        UIModule,
     ],
     declarations: [AppComponent],
     bootstrap: [AppComponent]

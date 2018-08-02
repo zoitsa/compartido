@@ -6,7 +6,9 @@ import { UIModule } from '@compartido/web';
 const MODULES = [UIModule];
 
 @NgModule({
-  imports: [...MODULES],
+  imports: [
+    ...MODULES,
+  ],
   exports: [...MODULES]
 })
 export class SharedModule {}

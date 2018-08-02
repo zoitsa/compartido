@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { PIPES } from './pipes';
+import { PIPES } from '@compartido/features/ui/pipes';
 
 const MODULES = [TranslateModule];
 

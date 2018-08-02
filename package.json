@@ -43,7 +43,7 @@
     "@angular/router": "6.0.1",
     "@compartido/scss": "file:libs/scss",
     "@ngrx/effects": "5.2.0",
-    "@ngrx/entity": "^6.0.1",
+    "@ngrx/entity": "5.2.0",
     "@ngrx/router-store": "5.2.0",
     "@ngrx/store": "5.2.0",
     "@ngrx/store-devtools": "5.2.0",
@@ -56,7 +56,7 @@
     "nativescript-theme-core": "^1.0.4",
     "ngrx-store-freeze": "0.2.2",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "6.0.0",
+    "rxjs": "6.2.1",
     "rxjs-compat": "^6.1.0",
     "tns-core-modules": "~4.1.0",
     "zone.js": "^0.8.26"

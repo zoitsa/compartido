@@ -1,1 +1,1 @@
-export * from './app.base-component';
+export * from '@compartido/nativescript/features/ui/base/app.base-component';
