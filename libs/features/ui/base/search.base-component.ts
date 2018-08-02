@@ -16,7 +16,7 @@ import { RecipesState } from '@compartido/core/state/recipes.state';
 
 export abstract class SearchBaseComponent extends BaseComponent
   implements OnInit {
-  @ViewChild('input') input: ElementRef; // To select input element
+  public search$: Subject<string> = new Subject();
   private unsubscribe: Subject<void> = new Subject();
 
   constructor(
@@ -27,18 +27,12 @@ export abstract class SearchBaseComponent extends BaseComponent
 
   ngOnInit() {
     console.log('woooo!')
-    const source = fromEvent(this.input.nativeElement, 'keyup');
-    source
-      .pipe(
-        takeUntil(this.unsubscribe),
-        // Create an observable from input keyup events
-        map((e: any) => e.target.value), // mapping the raw value to the actual user input
-        filter((text: string) => text.length > 1), // do nothing if user enters nothing
-        debounceTime(400), // only check the events every 400ms
-        tap((query: string) => this.store.dispatch(new RecipeActions.Get(query))) // make a search with the query
-      )
-      .subscribe(data => {
-        console.log(data);
-      });
+
+    this.search$.pipe(
+      debounceTime(500), 
+      takeUntil(this.destroy$),
+      tap((query: string) => this.store.dispatch(new RecipeActions.Get(query)))
+    ).subscribe((value: string) => {
+    })
   }
 }

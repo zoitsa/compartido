@@ -7,4 +7,6 @@ import { BaseComponent } from '@compartido/core';
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent extends BaseComponent {}
+export class HomeComponent extends BaseComponent {
+
+}

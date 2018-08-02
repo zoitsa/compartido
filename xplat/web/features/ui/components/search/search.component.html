@@ -1,7 +1,13 @@
 <div fxLayout="column" fxLayoutAlign="center">
     <form>
         <mat-form-field>
-            <input matInput type="search" #input placeholder="Search for recipes...">
+            <input 
+            (keyup)="search$.next(search.value)"
+            (search)="search$.next(search.value)"
+            matInput 
+            type="search" 
+            #search 
+            placeholder="Search for recipes...">
         </mat-form-field>
     </form>
 </div>
