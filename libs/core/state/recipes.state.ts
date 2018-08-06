@@ -6,7 +6,7 @@ import {
   MetaReducer
 } from '@ngrx/store';
 import * as fromRecipes from '@compartido/core/state/recipes.reducer';
-import { environment } from '@compartido/core';
+import { environment } from '../environments/environment';
 
 export namespace RecipesState {
   /**

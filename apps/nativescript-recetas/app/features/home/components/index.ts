@@ -1,7 +1,7 @@
-import { HomeComponent } from './home.component';
+import { HomeComponent } from '~/features/home/components/home.component';
 
 export const HOME_COMPONENTS = [
-  HomeComponent
+  HomeComponent,
 ];
 
-export * from './home.component';
+export * from '~/features/home/components/home.component';

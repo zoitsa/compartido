@@ -11,3 +11,9 @@
         </mat-form-field>
     </form>
 </div>
+
+<div *ngIf="results$ | async as results">
+    <div *ngFor="let recipes of results">
+        <p>{{recipes.recipe.label}}</p>
+    </div>
+</div>

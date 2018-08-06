@@ -1,4 +1,14 @@
 <StackLayout class="p-20">
     <SearchBar hint="Search for a recipe" #search text="" (textChange)="search$.next(search.text)" 
         color="white" textFieldBackgroundColor="purple" textFieldHintColor="white"></SearchBar>
+    
+    <ListView [items]="results$ | async">
+        <ng-template let-item="item" let-i="index">
+            <StackLayout>
+                <Label [text]="item.recipe.label"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
 </StackLayout>
+<!-- <app-search-results [results]="results$ | async"></app-search-results> -->
+
