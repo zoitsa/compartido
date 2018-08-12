@@ -1,12 +1,12 @@
 <div fxLayout="column" fxLayoutAlign="center">
     <form>
         <mat-form-field>
-            <input 
+            <input
             (keyup)="search$.next(search.value)"
             (search)="search$.next(search.value)"
-            matInput 
-            type="search" 
-            #search 
+            matInput
+            type="search"
+            #search
             placeholder="Search for recipes...">
         </mat-form-field>
     </form>
@@ -14,6 +14,6 @@
 
 <div *ngIf="results$ | async as results">
     <div *ngFor="let recipes of results">
-        <p>{{recipes.recipe.label}}</p>
+        <a [routerLink]="[recipes.recipe.uri]"><p>{{recipes.recipe.label}}</p></a>
     </div>
 </div>

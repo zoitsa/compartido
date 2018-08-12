@@ -1,7 +1,7 @@
-import { OnDestroy } from '../../../apps/nativescript-recetas/node_modules/@angular/core';
+import { OnDestroy } from '@angular/core';
 
 // libs
-import { Subject } from '../../../apps/nativescript-recetas/node_modules/rxjs';
+import { Subject } from 'rxjs';
 
 export abstract class BaseComponent implements OnDestroy {
   public destroy$: Subject<any> = new Subject();

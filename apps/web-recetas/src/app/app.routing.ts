@@ -8,11 +8,11 @@ import { SharedModule } from './features/shared/shared.module';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/recipes',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'recipes',
     loadChildren: './features/home/home.module#HomeModule'
   }
 ];
