@@ -1,0 +1,9 @@
+<StackLayout *ngIf="results$ | async as results">
+    <ListView [items]="results">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout>
+                <Label [text]="item.recipe.label"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</StackLayout>
