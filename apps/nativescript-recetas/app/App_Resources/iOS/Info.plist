@@ -49,6 +49,15 @@
   <dict>
     <key>NSAllowsArbitraryLoads</key>
     <true/>
+		<key>NSExceptionDomains</key>
+			<dict>
+				<key>https://api.edamam.com/search</key>
+				<dict>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+					<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+					<false/>
+			</dict>
 		<key>NSAllowsArbitraryLoadsForMedia</key>
 		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
