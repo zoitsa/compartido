@@ -1,4 +1,4 @@
-import { isIOS } from 'tns-core-modules/platform';
+import { isIOS } from 'tns-core-modules/platform/platform';
 
 export const backIcon = function() {
   return `fa-${isIOS ? 'chevron-left' : 'arrow-left'}`;

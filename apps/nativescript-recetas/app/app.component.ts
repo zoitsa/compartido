@@ -6,9 +6,7 @@ import { AppBaseComponent, AppService } from '@compartido/nativescript';
 @Component({
   selector: 'app-root',
   template: `
-    <StackLayout class="page p-20">
-      <Label automationText="helloLabel" [text]="'hello' | translate" class="h1 p-10 text-center"></Label>
-    </StackLayout>`
+  <page-router-outlet></page-router-outlet>`
 })
 export class AppComponent extends AppBaseComponent {
 

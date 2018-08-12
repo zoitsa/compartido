@@ -1,1 +1,1 @@
-export * from './icons';
+export * from '@compartido/nativescript/utils/icons';

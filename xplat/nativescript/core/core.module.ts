@@ -3,7 +3,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 // nativescript
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
-import { device } from 'tns-core-modules/platform';
+import { device } from 'tns-core-modules/platform/platform';
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 
 // libs
@@ -16,9 +16,9 @@ import {
 import { throwIfAlreadyLoaded } from '@compartido/utils';
 
 // app
-import { PROVIDERS } from './services';
-import { TNSWindowPlatformService } from './services/tns-window.service';
-import { TNSTranslateLoader } from './services/tns-translate.loader';
+import { PROVIDERS } from '@compartido/nativescript/core/services';
+import { TNSWindowPlatformService } from '@compartido/nativescript/core/services/tns-window.service';
+import { TNSTranslateLoader } from '@compartido/nativescript/core/services/tns-translate.loader';
 
 // factories
 export function platformLangFactory() {

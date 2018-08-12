@@ -1,2 +1,2 @@
-export * from './core';
-export * from './features';
+export * from '@compartido/web/core';
+export * from '@compartido/web/features';

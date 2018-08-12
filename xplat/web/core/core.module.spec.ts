@@ -1,4 +1,4 @@
-import { AppCoreModule } from './core.module';
+import { AppCoreModule } from '@compartido/web/core/core.module';
 
 describe('AppCoreModule', () => {
   it('should work', () => {

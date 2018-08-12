@@ -11,6 +11,7 @@ const MODULES = [
   imports: [
     ...MODULES
   ],
+  declarations: [],
   exports: [
     ...MODULES,
   ]

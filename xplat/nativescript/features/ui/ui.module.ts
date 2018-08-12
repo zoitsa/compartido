@@ -6,7 +6,7 @@ import { NativeScriptRouterModule } from 'nativescript-angular/router';
 
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import { UISharedModule } from '@compartido/features';
-import { UI_COMPONENTS } from './components';
+import { UI_COMPONENTS } from '@compartido/nativescript/features/ui/components';
 
 const MODULES = [
   NativeScriptCommonModule,

@@ -28,7 +28,8 @@
     "start.web.recetas": "ng serve web-recetas",
     "start.nativescript.recetas.ios": "cd apps/nativescript-recetas && tns run ios --emulator --bundle --env.aot",
     "start.nativescript.recetas.android": "cd apps/nativescript-recetas && tns run android --emulator --bundle --env.aot",
-    "clean.nativescript.recetas": "cd apps/nativescript-recetas && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json"
+    "clean.nativescript.recetas": "cd apps/nativescript-recetas && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json",
+    "start.web.test": "ng serve web-test"
   },
   "private": true,
   "dependencies": {
@@ -40,24 +41,25 @@
     "@angular/platform-browser": "6.0.1",
     "@angular/platform-browser-dynamic": "6.0.1",
     "@angular/router": "6.0.1",
-    "core-js": "^2.5.4",
-    "rxjs": "6.0.0",
-    "rxjs-compat": "^6.1.0",
-    "zone.js": "^0.8.26",
-    "@nrwl/nx": "6.1.1",
+    "@compartido/scss": "file:libs/scss",
     "@ngrx/effects": "5.2.0",
+    "@ngrx/entity": "5.2.0",
     "@ngrx/router-store": "5.2.0",
     "@ngrx/store": "5.2.0",
     "@ngrx/store-devtools": "5.2.0",
-    "ngrx-store-freeze": "0.2.2",
     "@ngx-translate/core": "~10.0.1",
     "@ngx-translate/http-loader": "~3.0.1",
-    "@compartido/scss": "file:libs/scss",
+    "@nrwl/nx": "6.1.1",
+    "core-js": "^2.5.4",
     "nativescript-angular": "~6.0.0",
     "nativescript-ngx-fonticon": "^4.2.0",
     "nativescript-theme-core": "^1.0.4",
+    "ngrx-store-freeze": "0.2.2",
     "reflect-metadata": "^0.1.12",
-    "tns-core-modules": "~4.1.0"
+    "rxjs": "6.2.1",
+    "rxjs-compat": "^6.1.0",
+    "tns-core-modules": "~4.1.0",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular/compiler-cli": "6.0.1",

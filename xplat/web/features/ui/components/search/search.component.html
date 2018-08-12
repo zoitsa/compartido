@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center">
+    <form>
+        <mat-form-field>
+            <input 
+            (keyup)="search$.next(search.value)"
+            (search)="search$.next(search.value)"
+            matInput 
+            type="search" 
+            #search 
+            placeholder="Search for recipes...">
+        </mat-form-field>
+    </form>
+</div>
+
+<div *ngIf="results$ | async as results">
+    <div *ngFor="let recipes of results">
+        <p>{{recipes.recipe.label}}</p>
+    </div>
+</div>

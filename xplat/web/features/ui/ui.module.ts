@@ -3,6 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import {
+  MatInputModule,
+  MatCardModule,
+  MatButtonModule,
+  MatListModule,
+  MatProgressSpinnerModule,
+  MatIconModule,
+} from '@angular/material';
+
+
 // libs
 import { UISharedModule } from '@compartido/features';
 
@@ -11,7 +21,13 @@ const MODULES = [
   RouterModule,
   FormsModule,
   ReactiveFormsModule,
-  UISharedModule
+  UISharedModule,
+  MatInputModule,
+  MatCardModule,
+  MatButtonModule,
+  MatListModule,
+  MatProgressSpinnerModule,
+  MatIconModule,
 ];
 
 @NgModule({

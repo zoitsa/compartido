@@ -2,10 +2,10 @@
 import { Injectable, Inject, NgZone } from '@angular/core';
 
 // nativescript
-import * as tnsApp from 'tns-core-modules/application';
+import * as tnsApp from 'tns-core-modules/application/application';
 import * as tnsUtils from 'tns-core-modules/utils/utils';
-import { device, isIOS, isAndroid } from 'tns-core-modules/platform';
-import { DeviceOrientation } from 'tns-core-modules/ui/enums';
+import { device, isIOS, isAndroid } from 'tns-core-modules/platform/platform';
+import { DeviceOrientation } from 'tns-core-modules/ui/enums/enums';
 
 // libs
 import { TranslateService } from '@ngx-translate/core';
@@ -140,7 +140,7 @@ const getOrientation = function() {
       return DeviceOrientation.landscape;
     } else if (
       deviceOrientation === UIDeviceOrientation.Portrait ||
-      deviceOrientation == UIDeviceOrientation.PortraitUpsideDown
+      deviceOrientation === UIDeviceOrientation.PortraitUpsideDown
     ) {
       return DeviceOrientation.portrait;
     } else {

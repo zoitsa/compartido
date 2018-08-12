@@ -22,6 +22,12 @@
     },
     "nativescript-recetas": {
       "tags": []
+    },
+    "web-test": {
+      "tags": []
+    },
+    "web-test-e2e": {
+      "tags": []
     }
   }
 }

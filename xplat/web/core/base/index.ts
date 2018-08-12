@@ -1,1 +1,1 @@
-export * from './app.base-component';
+export * from '@compartido/web/core/base/app.base-component';

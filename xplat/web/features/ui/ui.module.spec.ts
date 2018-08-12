@@ -1,4 +1,4 @@
-import { UIModule } from './ui.module';
+import { UIModule } from '@compartido/web/features/ui/ui.module';
 
 describe('UIModule', () => {
   it('should work', () => {

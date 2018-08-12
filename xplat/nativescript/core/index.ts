@@ -1,2 +1,2 @@
-export * from './services';
-export { AppCoreModule } from './core.module';
+export * from '@compartido/nativescript/core/services';
+export { AppCoreModule } from '@compartido/nativescript/core/core.module';
