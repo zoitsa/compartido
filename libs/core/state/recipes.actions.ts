@@ -22,5 +22,8 @@ export namespace RecipeActions {
     constructor(public payload: any) {}
   }
 
-  export type Actions = Get | GetComplete | GetError;
+  export type Actions 
+  = Get 
+  | GetComplete 
+  | GetError;
 }

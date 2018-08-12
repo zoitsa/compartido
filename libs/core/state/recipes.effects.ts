@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action, Store } from '@ngrx/store';
-import { RecipesState } from '@compartido/core/state/recipes.state';
+import { RecipesState } from './recipes.state';
 import { RecipeActions } from './recipes.actions';
 import { DataPersistence } from '@nrwl/nx';
 import { ApiService } from '@compartido/core/services';
@@ -28,28 +28,17 @@ export const errorHandler = action => err => {
 
 @Injectable()
 export class RecipesEffects {
-  // @Effect()
-  // load$ = this.dataPersistence.fetch(RecipesActions.Types.LOAD, {
-  //   run: (action: RecipesActions.Load, state: RecipesState.IState) => {
-  //     return new RecipesActions.Loaded(state);
-  //   },
-
-  //   onError: (action: RecipesActions.Load, error) => {
-  //     console.error('Error', error);
-  //   }
-  // });
 
   @Effect()
-  getAll$: Observable<Action> = this.actions$.pipe(
+  getAll$ = this.actions$.pipe(
     ofType(RecipeActions.Types.GET),
     switchMap((action: RecipeActions.Get) => {
-      return this.api
-        .searchRecipes(action.payload)
+      return this.api.searchRecipes((action.payload))
         .pipe(
-          map((res: object) => new RecipeActions.GetComplete(res)),
+          map((action: RecipeActions.GetComplete) => new RecipeActions.GetComplete((action))),
           catchError(errorHandler(RecipeActions.GetError))
         );
-    })
+    }),
   );
 
   constructor(

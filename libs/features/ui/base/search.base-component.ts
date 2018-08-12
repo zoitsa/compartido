@@ -26,12 +26,12 @@ export abstract class SearchBaseComponent extends BaseComponent
   }
 
   ngOnInit() {
-    console.log('woooo!')
-
     this.search$.pipe(
       debounceTime(500), 
       takeUntil(this.destroy$),
-      tap((query: string) => this.store.dispatch(new RecipeActions.Get(query)))
+      tap((query: string) => {
+        this.store.dispatch(new RecipeActions.Get(query))
+      })
     ).subscribe((value: string) => {
     })
   }

@@ -1,6 +1,5 @@
 import { Action } from '@ngrx/store';
 import { RecipeActions } from './recipes.actions';
-// import { RecipesState } from './recipes.state';
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 
 export namespace recipeReducer {
