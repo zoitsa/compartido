@@ -2,11 +2,5 @@
   "name": "@compartido/web",
   "version": "1.0.0",
   "main": "index",
-  "typings": "index.d.ts",
-  "dependencies": {
-    "@angular-devkit/core": "^0.7.1",
-    "@angular/cdk": "^6.4.2",
-    "@angular/material": "^6.4.2",
-    "rxjs": "6.2.2"
-  }
+  "typings": "index.d.ts"
 }

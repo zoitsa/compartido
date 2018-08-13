@@ -12,20 +12,16 @@ import { SearchBar } from 'tns-core-modules/ui/search-bar';
 })
 export class SearchComponent extends SearchBaseComponent {
   test = 'test';
-  results$;
 
   constructor(
     store: Store<RecipesState.State>
   ) {
     super( store );
-    this.results$ = store.pipe(select(RecipesState.selectAllRecipes));
   }
 
   public onTextChanged(args) {
     let searchBar = <SearchBar>args.object;
     this.search$.next(searchBar.text);
 }
-
-// search$.next(search.text)
 
 }
