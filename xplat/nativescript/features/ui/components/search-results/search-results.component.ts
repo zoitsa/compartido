@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component,} from '@angular/core';
 
 import { SearchBaseComponent } from '@compartido/features';
 import { Store, select } from '@ngrx/store';
@@ -10,7 +10,7 @@ import { Observable, Subject} from 'rxjs';
   selector: 'app-search-results',
   templateUrl: './search-results.component.html'
 })
-export class SearchResultsComponent extends SearchBaseComponent implements OnInit {
+export class SearchResultsComponent extends SearchBaseComponent {
   results$: Observable<any>;
 
   constructor(store: Store<RecipesState.State>) {
@@ -19,11 +19,5 @@ export class SearchResultsComponent extends SearchBaseComponent implements OnIni
     this.results$ = store.pipe(
       select(RecipesState.selectAllRecipes)
     );
-  }
-
-  ngOnInit() {
-    this.results$.subscribe(data => {
-      console.dir(data);
-    })
   }
 }

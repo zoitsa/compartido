@@ -1,8 +1,7 @@
-export * from '@compartido/core/base';
-export * from '@compartido/core/environments/environment';
-export * from '@compartido/core/services';
-export { CoreModule } from '@compartido/core/core.module';
-export * from '@compartido/core/state';
-export * from '@compartido/core/state';
+export * from './base';
+export * from './environments/environment';
+export * from './services';
+export * from './state';
+export { CoreModule } from './core.module';
 
 
